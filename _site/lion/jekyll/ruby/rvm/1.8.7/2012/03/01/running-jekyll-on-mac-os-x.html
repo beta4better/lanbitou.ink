@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Running Jekyll on Mac OS X | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Running Jekyll on Mac OS X" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="自从Mac买回来到现在差不多快一周了，装了一些软件，这两天在配置Jekyll环境，因为现在我主要使用Jekyll写点东西。完全静态的方法，只需要专心地在电脑上开个编辑器敲敲键盘就可以了。" />
+<meta property="og:description" content="自从Mac买回来到现在差不多快一周了，装了一些软件，这两天在配置Jekyll环境，因为现在我主要使用Jekyll写点东西。完全静态的方法，只需要专心地在电脑上开个编辑器敲敲键盘就可以了。" />
+<link rel="canonical" href="http://localhost:4000/lion/jekyll/ruby/rvm/1.8.7/2012/03/01/running-jekyll-on-mac-os-x.html" />
+<meta property="og:url" content="http://localhost:4000/lion/jekyll/ruby/rvm/1.8.7/2012/03/01/running-jekyll-on-mac-os-x.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-03-01T20:11:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Running Jekyll on Mac OS X" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Running Jekyll on Mac OS X","dateModified":"2012-03-01T20:11:00+08:00","datePublished":"2012-03-01T20:11:00+08:00","description":"自从Mac买回来到现在差不多快一周了，装了一些软件，这两天在配置Jekyll环境，因为现在我主要使用Jekyll写点东西。完全静态的方法，只需要专心地在电脑上开个编辑器敲敲键盘就可以了。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/lion/jekyll/ruby/rvm/1.8.7/2012/03/01/running-jekyll-on-mac-os-x.html"},"url":"http://localhost:4000/lion/jekyll/ruby/rvm/1.8.7/2012/03/01/running-jekyll-on-mac-os-x.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Running Jekyll on Mac OS X</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-03-01T20:11:00+08:00" itemprop="datePublished">Mar 1, 2012
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>自从Mac买回来到现在差不多快一周了，装了一些软件，这两天在配置Jekyll环境，因为现在我主要使用Jekyll写点东西。完全静态的方法，只需要专心地在电脑上开个编辑器敲敲键盘就可以了。</p>
+
+<p>Mac还是第一次用，之前折腾过一整子黑苹果。因为是黑苹果，装完之后各种不完美。最好的情况是只有声卡没有驱动起来。当时用的Intel的平台，不过后来电脑送给我弟弟了，买了个浩鑫的准系统，把处理器、内存、硬盘啥的都放进去了。现在手头没有Intel平台的电脑了，没法折腾了。</p>
+
+<p>不过总的说来，用Mac快一周了，感觉真的很不错。唯一感觉不太好的是Terminal下各种命令和Linux完全不一样，虽然据我了解Mac应该是基于Unix的，可是还是不太一样。比如说，在Linux下删除一个目录一条命令就可以： <code class="language-plaintext highlighter-rouge">rm dir_name -rf</code>。但是在Mac下这条命令丝毫不起作用。还是得以后慢慢熟悉Mac。</p>
+
+<p>言归正传，接下来还是说说如何在Mac下配置Jekyll的环境。</p>
+
+<p>首先，安装<a href="https://rvm.beginrescueend.com/support/">RVM</a>（Ruby Version Manager）。我对Mac的文件系统丝毫不了解，还是将ruby全部安装在自己的用户目录下比较好，不会影响整个系统，如果后期出现什么问题，直接把 <code class="language-plaintext highlighter-rouge">.rvm</code> 这个目录删掉就好了。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash -s stable &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function' &gt;&gt; ~/.bash_profile
+source ~/.bash_profile
+</code></pre></div></div>
+
+<p>然后安装ruby 1.8.7。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CC=/usr/bin/gcc-4.2 rvm install 1.8.7
+</code></pre></div></div>
+
+<p>最后安装Jekyll。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll
+</code></pre></div></div>
+
+<p>上面的几个命令完成了之后Jekyll基本就可以用了，在这之前我还安装了Xcode，从App Store上下载的。还安装了<a href="http://git-scm.com/">Git</a>,主要是安装RVM的时候用。不过装完了之后在安装RVM的时候出现了一个错误提示： <code class="language-plaintext highlighter-rouge">make not found</code>。解决方法是安装一个叫做<a href="https://github.com/kennethreitz/osx-gcc-installer/downloads">osx-gcc-installer</a>的文件，从这里下载</p>
+
+<ul>
+  <li><a href="https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg">https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg</a></li>
+</ul>
+
+<p>上面的问题解决了之后还出现一个问题</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/timeout.rb:60: [BUG] Segmentation fault
+</code></pre></div></div>
+
+<p>解决方法如下</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm remove 1.8.7
+rvm remove 1.8.7 --gems
+rvm remove 1.8.7 --archive
+CC=/usr/bin/gcc-4.2 rvm install 1.8.7
+</code></pre></div></div>
+
+<p>具体原因请参考下面的两个网站</p>
+
+<ul>
+  <li>http://jalada.co.uk/2011/07/24/lion-rvm-and-ruby-1-8-7-woes.html</li>
+  <li>http://miclle.me/posts/90</li>
+</ul>
+
+<p>差不多就这几个问题吧，解决了Jekyll就可以用了。现在这篇就是在Mac下写的，还是挺方便的。不过从此看来Mac和Linux还是差别挺大的，至少在Terminal下Linux要比Mac方便好多，或许是我对Mac的了解还比较少吧。多多用Mac，慢慢就会都了解了，毕竟Linux用了好多年了，还算是熟悉。</p>
+
+<p>至此，本篇结束。今天是3月1号，春天了吧，不过还是觉得凉凉的，蛋说是“春寒料峭”，哈哈，有道理。今天下雨了，想起了一句话</p>
+
+<blockquote>
+  <p>春雨贵如油</p>
+</blockquote>
+
+<p>希望今年有个好收成、好年景！</p>
+
+  </div><a class="u-url" href="/lion/jekyll/ruby/rvm/1.8.7/2012/03/01/running-jekyll-on-mac-os-x.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
